@@ -1,17 +1,17 @@
-import { useState } from 'react'
+import { useState, type ReactNode } from 'react'
 
 interface Props {
-   heading: string
+   children: ReactNode
    items: string[]
    onSelectItem: (item: string) => void
 }
 
-const ListComponent = ({ heading, items, onSelectItem }: Props) => {
+const ListComponent = ({ children, items, onSelectItem }: Props) => {
    const [selectedItem, setSelectedItem] = useState(0)
    return (
       <>
          <div className="flex flex-col justify-center items-center">
-            <h1 className="text-2xl font-bold mb-2">{heading}</h1>
+            {children}
             <ul className="w-1/2 border border-grau-200 rounded-lg divide-y divide-gray-300 overflow-hidden">
                {items.map((item, index) => (
                   <li
