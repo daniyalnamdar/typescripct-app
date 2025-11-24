@@ -19,11 +19,9 @@ function App() {
                   This is a Link
                </a>
             </ListComponent>
-            {/* <ListComponent
-               items={frameworks}
-               heading="Frameworks"
-               onSelectItem={handleOnSelectItem}
-            /> */}
+            <ListComponent items={frameworks} onSelectItem={handleOnSelectItem}>
+               <h1 className="font-bold text-2xl mb-2">Framworks</h1>
+            </ListComponent>
          </div>
       </>
    )
