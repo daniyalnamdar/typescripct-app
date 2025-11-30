@@ -1,32 +1,26 @@
 import { useState } from 'react'
-import styled from 'styled-components'
 
-interface ListItemProps {
-   selected: boolean
-}
-const List = styled.ul`
-   list-style: none;
-   padding: 16px;
-`
-
-const ListItem = styled.li<ListItemProps>`
-   padding: 6px 8px;
-   background: ${props => (props.selected ? 'blue' : 'none')};
-   color: ${props => (props.selected ? 'while' : 'black')};
-`
 function App5() {
    const tasks = ['Wake Up', 'Eat', 'Workout', 'Code', 'Sleep', 'Repeat']
    const [active, setActive] = useState(0)
    return (
       <>
-         <h1> My Daily Tasks</h1>
-         <List>
+         <h1 className="text-2xl font-bold"> My Daily Tasks</h1>
+         <ul className="list-style">
             {tasks.map((task, index) => (
-               <ListItem key={index} selected={active === index}>
+               <li className="list-item-style" key={index}>
                   {task}
-               </ListItem>
+               </li>
             ))}
-         </List>
+         </ul>
+
+         <ul className="list-style">
+            {tasks.map((task, index) => (
+               <li className="list-item-style" key={index}>
+                  {task}
+               </li>
+            ))}
+         </ul>
       </>
    )
 }
