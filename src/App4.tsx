@@ -3,7 +3,18 @@ import PrimaryBtn from './components/PrimaryBtn'
 function App4() {
    return (
       <>
-         <PrimaryBtn />
+         <div
+            className="wrapper"
+            style={{
+               display: 'flex',
+               flexDirection: 'row',
+               justifyContent: 'center',
+               height: '100vh',
+               alignItems: 'center'
+            }}
+         >
+            <PrimaryBtn />
+         </div>
       </>
    )
 }
